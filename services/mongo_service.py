@@ -20,8 +20,8 @@ def list_games():
     collection_name = dbGameVault[GAME_COLLECTION_NAME]
     
     item_details = collection_name.find()
-    for item in item_details:
-        print(item)
+    #for item in item_details:
+        #print(item)
 
     return item_details
 

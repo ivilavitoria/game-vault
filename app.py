@@ -1,20 +1,54 @@
-from services.mongo_service import list_games, delete_game, save_user, get_user 
+# Construa uma interface que simule uma tela de login de usuário contendo o campo de login, senha e um botão de autenticação.
+from services.mongo_service import get_user
+import tkinter as tk
+root = tk.Tk()
 
-#list_games()
-#delete_game("646e5098ae64e7f3ca98fa52")
-#print('-----------')
-#list_games()
+def openCreateUser():
+    root.destroy()
+    import create_user
 
-#save_user({"email":"ivilavitoria@gmail.com", "password": "test2023"})
+def openCreateProduct():
+    root.destroy()
+    import list_product
 
-user = get_user("ivilavitoria@gmail.com")
-if user != None:
-    print (user["email"])
-    passwordStored = user["password"]
-    passWord = "test2023" 
-    if passWord == passwordStored:
-        print ("Login Ok")
-    else:
-        print ("Incorrect Password")
-else:
-    print("User dont exists!")
+
+def login():
+    login = str(make_login.get())
+    password = str(make_password.get())
+    user = get_user(login)
+
+    if user != None:
+        if user["password"] != password:
+            lb2 = tk.Label(text= "Incorrect Password", bg= "red")
+            lb2.place(x=55, y=80)
+            return
+        else: 
+            openCreateProduct()
+    else: 
+        lb3 = tk.Label(text= "User don't exists", bg= "red")
+        lb3.place(x=55, y=80)
+        return
+
+root.title("GameTracker")
+lbl = tk.Label(root, text = "Email: ")
+lbl.place(x=10, y=10)
+
+make_login = tk.Entry(root)
+make_login.place(x=55, y=10)
+
+lbl = tk.Label(root, text = "Password: ")
+lbl.place(x=10, y=35)
+
+make_password = tk.Entry(root, show= "*")
+make_password.place(x=55, y=35)
+
+bt = tk.Button(root, text="Sign In", command=login)
+bt.place(x=55, y=65)
+
+bt = tk.Button(root, text="Sign Up", command=openCreateUser)
+bt.place(x=55, y=100)
+
+root.geometry("800x400")
+root.mainloop()
+
+
