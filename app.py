@@ -5,11 +5,11 @@ root = tk.Tk()
 
 def openCreateUser():
     root.destroy()
-    import create_user
+    import services.create_user
 
 def openCreateProduct():
     root.destroy()
-    import list_product
+    import services.list_product
 
 
 def login():
