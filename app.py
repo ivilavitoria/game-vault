@@ -29,7 +29,7 @@ def login():
         lb3.place(x=55, y=80)
         return
 
-root.title("GameTracker")
+root.title("GameVault")
 lbl = tk.Label(root, text = "Email: ")
 lbl.place(x=10, y=10)
 

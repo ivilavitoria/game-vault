@@ -20,7 +20,7 @@ def saveProduct():
 
     openListProduct()
 
-root.title("GameTracker CREATE GAMES")
+root.title("GameVault CREATE GAMES")
 
 lbl = tk.Label(root, text = "Name: ")
 lbl.place(x=10, y=30)

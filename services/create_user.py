@@ -20,7 +20,7 @@ def saveUser():
 
     openLoginPage()
 
-root.title("GameTracker CREATE USER")
+root.title("GameVault CREATE USER")
 name = tk.Label(root, text = "Name: ")
 name.place(x=10, y=50)
 

@@ -15,7 +15,7 @@ def deleteProduct():
     selectedItem = tree.selection()[0]
     tree.delete(selectedItem)
 
-root.title("GameTracker LIST GAMES")
+root.title("GameVault LIST GAMES")
 
 tree = ttk.Treeview(root, column=("c1", "c2", "c3", "c4"), show='headings', height=5)
 
