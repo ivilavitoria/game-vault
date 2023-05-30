@@ -34,19 +34,19 @@ lbl = tk.Label(root, text = "Email: ")
 lbl.place(x=10, y=10)
 
 make_login = tk.Entry(root)
-make_login.place(x=55, y=10)
+make_login.place(x=75, y=10)
 
 lbl = tk.Label(root, text = "Password: ")
 lbl.place(x=10, y=35)
 
 make_password = tk.Entry(root, show= "*")
-make_password.place(x=55, y=35)
+make_password.place(x=75, y=35)
 
 bt = tk.Button(root, text="Sign In", command=login)
-bt.place(x=55, y=65)
+bt.place(x=75, y=65)
 
 bt = tk.Button(root, text="Sign Up", command=openCreateUser)
-bt.place(x=55, y=100)
+bt.place(x=75, y=100)
 
 root.geometry("800x400")
 root.mainloop()
